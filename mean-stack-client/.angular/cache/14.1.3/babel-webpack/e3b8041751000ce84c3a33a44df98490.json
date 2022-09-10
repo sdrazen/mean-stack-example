@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let GlobalConstants = /*#__PURE__*/(() => {\n  class GlobalConstants {}\n\n  GlobalConstants.api_url = \"http://jsonplaceholder.typicode.com/posts\";\n  return GlobalConstants;\n})();","map":null,"metadata":{},"sourceType":"module"}

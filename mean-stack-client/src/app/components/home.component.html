@@ -1,0 +1,136 @@
+<!-- Add Contact -->
+<div class=" card w-75">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <ul class="list-group">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <div class="caption-category-indicator">Add contact</div>
+          <br>
+          <br>
+          <div class="row margin-top-30">
+            <div class="col-md-3">
+              First name:
+            </div>
+            <div class="col-md-9">
+              <input name="first_name" type="text" class="form-control" [(ngModel)]="first_name">
+            </div>
+          </div>
+          <div class="row margin-top-7">
+            <div class="col-md-3">
+              Last name:
+            </div>
+            <div class="col-md-9">
+              <input name="last_name" type="text" class="form-control" [(ngModel)]="last_name">
+            </div>
+          </div>
+          <div class="row margin-top-7">
+            <div class="col-md-3">
+              Phone:
+            </div>
+            <div class="col-md-9">
+              <input name="phone" type="text" class="form-control" [(ngModel)]="phone">
+            </div>
+          </div>
+          <div class="row margin-top-30">
+            <div class="col-md-12">
+              <button (click)="onAddClick()" class="btn btn-primary width-100 pull-right">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 margin-top-100">
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Host:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.host}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Port:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.port}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Database type:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.databasetype}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Database type name:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.databasetypename}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Database name:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.databasename}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-right">
+              Collection name:
+            </div>
+            <div class="col-md-6">
+              {{apiInfo.collectionname}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<hr class="margin-top-50">
+
+<div class=" card w-75">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <ul class="list-group">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="caption-category-indicator margin-top-30">Contact list</div>
+          <br>
+          <br>
+          <br>
+          <div class="row margin-top-7" *ngFor="let item of backendData">
+            <div class="col-md-3">
+              {{item.first_name}}
+            </div>
+            <div class="col-md-3">
+              {{item.last_name}}
+            </div>
+            <div class="col-md-3">
+              {{item.phone}}
+            </div>
+            <div class="col-md-3 text-right">
+              <button (click)="onDeleteClick(item._id)" class="btn btn-danger width-100 pull right">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <hr>
+  <p class="text-center"> Copyright &copy; 2022. All Rights Reserved. Developer: <a href="mailto:sdrazen@yahoo.com">Dražen Škrinjarić</a></p>
+</div>
